@@ -6,12 +6,9 @@ gem 'friendly_id', '~> 5.0.0'
 gem 'rmagick'
 gem 'will_paginate'
 gem 'public_activity'
-
 gem 'acts_as_votable', '~> 0.10.0'
-
-gem 'acts_as_follower'
 gem 'counter_culture', '~> 0.1.33'
-
+gem 'mailboxer'
 gem 'faker'
 gem 'populator'
 gem 'auto_html'

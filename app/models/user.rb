@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
   has_many :friendships
   has_many :friends, :through => :friendships
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
@@ -9,4 +10,13 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  acts_as_messageable
+    def mailboxer_name
+      self.name
+    end
+
+    def mailboxer_email(object)
+      self.email
+    end
+
 end
