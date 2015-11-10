@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Attachment:</strong>
-  <%= image_tag @post.picture.url %>
-</p>
+<%= render @post %>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.message %>
-</p>
+<h2>Comments</h2>
+
+<div id="comments">
+  <%= render @post.comments %>
+</div>
+
+<h3>New Comment</h3>
+
+<%= render 'comments/form' %>
 
 
 

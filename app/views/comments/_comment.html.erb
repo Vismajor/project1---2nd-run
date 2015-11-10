@@ -1,6 +1,9 @@
-<div class="row">
-<%= @comment.user.full_name %>
-<div>
-<%= @comment.content %>
-</div>
-</div>
+<%= div_for comment do %>
+  <p><strong><%= link_to comment.user.full_name, comment.user %> says</strong></p>
+  <%= simple_format comment.content %>
+  <% if comment.user == current_user %>
+    <p>
+      <%= link_to "Destroy", [@post, comment], method: :delete %>
+    </p>
+  <% end %>
+<% end %>

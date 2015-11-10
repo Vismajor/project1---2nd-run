@@ -1,0 +1,6 @@
+<%= div_for post do %>
+  <%= image_tag post.picture, size: "120x120" %>
+  <h2><%= link_to post.title, post %></h2>
+  <%= simple_format post.message %>
+  <em>added by <%= link_to post.user.full_name, post.user %></em>
+<% end %>

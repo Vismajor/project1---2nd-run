@@ -1,8 +1,9 @@
 <%= form_for(@post) do |f| %>
   <div class="form-group">
     <%= f.label 'Update status' %><br>
-      <%= f.text_area :message, class: 'form-control', autofocus: true, 
-          placeholder: 'What\'s up?' %>
+      <%= f.text_field :title, class: 'form-control', autofocus: true, placeholder: 'Give a title for the picture!', size: 25 %>
+      <%= f.text_area :message, class: 'form-control', 
+          placeholder: 'Tell us about the picture!' %>
       <%= f.file_field :picture, class: 'form-control' %>
   </div>
   <%= f.submit :post %>
