@@ -4,6 +4,14 @@ class ApplicationController < ActionController::Base
   include PublicActivity::StoreController
   protect_from_forgery with: :exception
 
+  helper_method :mailbox
+
+  
+  private
+
+  def mailbox
+    @mailbox ||= current_user.mailbox
+  end
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
     protected
@@ -11,4 +19,5 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.for(:sign_up) << [:full_name, :password_confirmation]
       devise_parameter_sanitizer.for(:sign_in) << [:email, :remember_me]
     end
+
 end

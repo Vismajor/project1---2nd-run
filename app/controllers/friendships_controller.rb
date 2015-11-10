@@ -3,7 +3,7 @@ class FriendshipsController < ApplicationController
     @friendship = current_user.friendships.build(:friend_id => params[:friend_id])
     if @friendship.save
       flash[:error] = "Unable to add friend."
-      redirect_to root_path
+      redirect_to current_user
     else
      render :action => 'new'
     end
