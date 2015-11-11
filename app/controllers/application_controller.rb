@@ -4,10 +4,14 @@ class ApplicationController < ActionController::Base
   include PublicActivity::StoreController
   protect_from_forgery with: :exception
 
-  helper_method :mailbox
+  helper_method :mailbox, :conversation
 
   
   private
+
+  def conversation
+     @conversation ||= mailbox.conversations.find(params[:id])
+   end
 
   def mailbox
     @mailbox ||= current_user.mailbox

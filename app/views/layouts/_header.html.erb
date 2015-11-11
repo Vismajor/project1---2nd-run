@@ -1,26 +1,44 @@
-<%# if user_signed_in? %>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/posts">InstaGran</a>
+    </div>
 
-  <%#= link_to('Logout', destroy_user_session_path, :method => :delete)  %>  
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul>
+      <ul class="nav navbar-nav navbar-middle">
+      <% if user_signed_in? %>
+        <li><%= link_to "Hello, #{current_user.full_name}", current_user %></span></a></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "Post a picture!", new_post_path %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mailbox <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Inbox", mailbox_inbox_path %></li>
+            <li><%= link_to "Sent", mailbox_sent_path %></li>
+            <li><%= link_to "Trashbin", mailbox_trash_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to "Compose", new_conversation_path %></li>
+          </ul>
+        </li>
+        <% else %>
+        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <%=  %>
+        <% end %>
+      </ul>
+    
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 
-  <%#= link_to('Share a new picture!', new_post_path)  %>  
 
-<%# else %>
-
-  <%#= link_to('Login', new_user_session_path)  %>  
-
-    <%#= link_to('Register', new_user_registration_path ) %>
-
-  <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav pull-right">
-          <% if user_signed_in? %>
-              <li><%= link_to "Hello, #{current_user.full_name}", "#" %></li>
-              <li><%= link_to "Inbox", mailbox_inbox_path %></li>
-              <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-          <% else %>
-              <li class="active"><%= link_to "Login", new_user_session_path %></li>
-              <li><%= link_to "Sign up", new_user_registration_path %></li>
-          <% end %>
-        </ul>
-      </div>
-<%# end %>
