@@ -44,7 +44,7 @@ before_filter :configure_permitted_parameters
       end
       devise_parameter_sanitizer.for(:account_update) do |u|
         u.permit(:full_name,
-          :email, :password, :password_confirmation, :current_password, :profile_picture)
+          :email, :password, :password_confirmation, :current_password, :profile_picture, :role)
       end
     end
 

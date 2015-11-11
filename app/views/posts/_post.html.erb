@@ -1,19 +1,16 @@
 
-<div class="row">
-<%= div_for post do %>
-  
-    <div class="col-sm-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title"><%= link_to post.title, post %></h3>
-        </div>
+  <%= div_for post do %>
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= link_to post.title, post %></h3>
+      </div>
       <div class="panel-body">
         <%= image_tag post.picture %>
       </div>
       <div class="panel-footer">
-    <em>added by <%= link_to post.user.full_name, post.user %></em>
+        <em>added by <%= link_to post.user.full_name, post.user %></em>
+      </div>
     </div>
-    </div>
-  
-<% end %>
-</div>
+  </div>
+  <% end %>

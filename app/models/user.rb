@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  ROLES = %i[admin user]
   mount_uploader :profile_picture, AvatarUploader
   has_many :friendships
   has_many :friends, :through => :friendships

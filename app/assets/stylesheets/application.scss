@@ -4,12 +4,54 @@
 @import "font-awesome";
 @import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
 
+body { 
+  background-color: black;
+  background: url(https://studiolightings.files.wordpress.com/2014/09/background-paper.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+h1 {
+  font-family: 'Abril Fatface';
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #A0522D;
+    font-size: 26px;
+    line-height: 100px;
+    height: 100px;
+    padding-top: 0;
+    font-family: 'Abril Fatface';
+}
+
+.navbar-default .navbar-brand {
+    color: #A0522D;
+
+}
+
 .navbar-brand {
   font-family: 'Permanent Marker', cursive;
+  color: #A0522D;
+  line-height: 100px;
+  height: 100px;
+  padding-top: 0;
+  font-size: 32px;
 }
 
 .panel-body {
-    height: 250px;
+  height: 250px;
+}
+panel-default {
+  max-width: 300px;
+  max-height: 280px;
+}
+
+body { 
+    padding-top: 65px;
+    padding-bottom: 50px; 
 }
 
 img {
@@ -27,6 +69,7 @@ img {
 }
 
 .navbar-default {
-    background-color: #A9A9A9;
+    background-color: #EEE8AA
+;
 
 }
