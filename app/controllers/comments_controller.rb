@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
 
     def edit
       @comment = current_user.comments.find(params[:id])
-      # authorize! :show, @comment
+      authorize! :edit, @comment
     end
 
     def update
@@ -31,6 +31,7 @@ class CommentsController < ApplicationController
       @comment = current_user.comments.find(params[:id])
       @comment.destroy
       redirect_to @post, notice: "Comment was destroyed."
+      authorize! :destroy, @comment
     end
 
   private

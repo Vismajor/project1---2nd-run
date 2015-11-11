@@ -8,5 +8,25 @@
   font-family: 'Permanent Marker', cursive;
 }
 
+.panel-body {
+    height: 250px;
+}
 
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
 
+.btn-xl {
+    padding: 28px 38px;
+    font-size: 30px;
+    border-radius: 8px;
+}
+
+.navbar-default {
+    background-color: #A9A9A9;
+
+}

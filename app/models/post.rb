@@ -5,4 +5,6 @@ class Post < ActiveRecord::Base
   has_many :comments
   mount_uploader :picture, AvatarUploader
   acts_as_votable
+
+  scope :ordered , -> { order('posts.created_at DESC') }
 end
