@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   before_filter :authenticate_user!, only: [:create, :destroy]
   before_filter :load_post
+  load_and_authorize_resource
 
     def create
       @comment = @post.comments.build(comment_params)
@@ -14,6 +15,7 @@ class CommentsController < ApplicationController
 
     def edit
       @comment = current_user.comments.find(params[:id])
+      # authorize! :show, @comment
     end
 
     def update
