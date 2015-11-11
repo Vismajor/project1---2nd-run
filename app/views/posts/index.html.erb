@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-
 <h1>Posts</h1>
-
-<%= render @posts %>
+<div class="container">
+<div class="row">
+  <div class="col-md-4"><%= render @posts %></div>
+</div>
+</div>
 
 
 <%= link_to 'New Post', new_post_path %>

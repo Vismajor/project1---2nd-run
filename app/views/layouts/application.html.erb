@@ -11,10 +11,12 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <%= render "layouts/header" %>
-<%= yield %>
 
-<footer class="row">
-<nav>&copy; Instagran is a registered trademark, belongs to Zsolt, bane of all squirrels. </nav>
+<div class="container">
+<%= yield %>
+</div>
+<%= render "layouts/footer" %>
+
 </footer>
 </body>
 </html>

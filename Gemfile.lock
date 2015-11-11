@@ -58,6 +58,7 @@ GEM
       sass (~> 3.2)
     builder (3.2.2)
     byebug (8.1.0)
+    cancancan (1.13.1)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -87,6 +88,8 @@ GEM
     execjs (2.6.0)
     faker (1.5.0)
       i18n (~> 0.5)
+    font-awesome-sass (4.4.0)
+      sass (>= 3.2)
     foreigner (1.7.4)
       activerecord (>= 3.0.0)
     friendly_id (5.0.5)
@@ -213,11 +216,13 @@ DEPENDENCIES
   better_errors
   bootstrap-sass (~> 3.2.0)
   byebug
+  cancancan (~> 1.10)
   carrierwave
   coffee-rails (~> 4.1.0)
   counter_culture (~> 0.1.33)
   devise
   faker
+  font-awesome-sass
   friendly_id (~> 5.0.0)
   jbuilder (~> 2.0)
   jquery-rails

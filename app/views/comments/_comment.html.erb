@@ -1,3 +1,4 @@
+<div class='container-comments' border=1px>
 <%= div_for comment do %>
   <p><strong><%= link_to comment.user.full_name, comment.user %> says</strong></p>
   <%= simple_format comment.content %>
@@ -7,3 +8,4 @@
     </p>
   <% end %>
 <% end %>
+</div>

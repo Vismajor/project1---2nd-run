@@ -6,12 +6,13 @@ class ApplicationController < ActionController::Base
 
   helper_method :mailbox, :conversation
 
+
   
   private
 
   def conversation
      @conversation ||= mailbox.conversations.find(params[:id])
-   end
+  end
 
   def mailbox
     @mailbox ||= current_user.mailbox
