@@ -5,6 +5,6 @@ class Post < ActiveRecord::Base
   has_many :comments
   mount_uploader :picture, AvatarUploader
   acts_as_votable
-
+  self.per_page = 9
   scope :ordered , -> { order('posts.created_at DESC') }
 end

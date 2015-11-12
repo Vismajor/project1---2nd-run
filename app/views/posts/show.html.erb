@@ -1,6 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<%= render @post %>
+
+<div class="col-sm-6">
+  <div class="panel panel-show">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%=  @post.title %></h3>
+    </div>
+    <div class="panel-body-show">
+      <%= image_tag @post.picture %>
+    </div>
+    <div class="panel-footer">
+      <em>added by <%= link_to @post.user.full_name, @post.user %></em>
+    </div>
+  </div>
+</div>
 
 <h2>Comments</h2>
 

@@ -3,9 +3,8 @@
 <h1 align="center">POSTS</h1>
 <div class="row">
   <div class="container">
+    <%# @posts_paginated = render @posts %>
+    <%#= will_paginate @posts_paginated %>
     <%= render @posts.ordered %>
   </div>
 </div>
-
-
-<%= link_to 'New Post', new_post_path %>

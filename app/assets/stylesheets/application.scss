@@ -44,14 +44,21 @@ h1 {
 .panel-body {
   height: 250px;
 }
+.panel-body-show {
+  height: 100%;
+}
 panel-default {
   max-width: 300px;
   max-height: 280px;
 }
+panel-show {
+  max-width: 300px;
+  max-height: 450px;
+}
 
 body { 
     padding-top: 65px;
-    padding-bottom: 50px; 
+    padding-bottom: 0px; 
 }
 
 img {
