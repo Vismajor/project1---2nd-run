@@ -32,6 +32,7 @@ h1 {
 
 }
 
+
 .navbar-brand {
   font-family: 'Permanent Marker', cursive;
   color: #A0522D;
@@ -39,6 +40,9 @@ h1 {
   height: 100px;
   padding-top: 0;
   font-size: 32px;
+}
+.navbar .navbar-default .navbar-bottom {
+  position: absolute;
 }
 
 .panel-body {

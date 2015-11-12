@@ -1,11 +1,12 @@
 <h1><%= @user.full_name %>'s Profile</h1> <%= link_to "Edit your profile", edit_user_registration_path %>
 <%= @user.profile_picture %>
-
+<%#= this here will print out the users posts  %>
+<%#= link_to "#{@user.full_name}'s posts", posts_path.user_posts %>
+<%#= @user.posts %>
 <h2>Friends</h2>
 <ul>
-  
 <% for friendship in @user.friendships  %>
-<li>
+<li class="friends">
 <%= link_to friendship.friend.full_name, friendship.friend %>
 <%= link_to "remove from friends", friendship, :method => :delete %>
 </li>
@@ -14,9 +15,9 @@
 
 <%= link_to "Find friends", users_path %>
 <br>
-<%= link_to "#{@user.full_name}'s posts"  %>
 
-<p>Friended by user</p>
+
+<h2>Friended by user</h2>
 <ul>
   <% for user in @user.inverse_friends  %>
   <li><%= link_to user.full_name, user %></li>

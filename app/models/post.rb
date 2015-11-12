@@ -7,4 +7,5 @@ class Post < ActiveRecord::Base
   acts_as_votable
   self.per_page = 9
   scope :ordered , -> { order('posts.created_at DESC') }
+  scope :user_posts, ->(post) { where('posts.user_id = user.id') }
 end
