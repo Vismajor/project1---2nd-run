@@ -39,16 +39,25 @@ h1 {
   line-height: 100px;
   height: 100px;
   padding-top: 0;
-  font-size: 32px;
+  font-size: 40px;
 }
-.navbar .navbar-default .navbar-bottom {
-  position: absolute;
+
+.nav-stacked {
+  font-size: 30px;
+  color: #A0522D;
+}
+.nav-stacked > a {
+  font-size: 30px;
+  color: #A0522D;
 }
 
 .panel-body {
   height: 250px;
 }
 .panel-body-show {
+  height: 100%;
+}
+.panel-body-mailbox {
   height: 100%;
 }
 panel-default {
