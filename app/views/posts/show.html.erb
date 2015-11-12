@@ -2,7 +2,7 @@
 
 
 <div class="col-sm-6">
-  <div class="panel panel-show">
+  <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title"><%=  @post.title %></h3>
     </div>
@@ -10,7 +10,11 @@
       <%= image_tag @post.picture %>
     </div>
     <div class="panel-footer">
+    <div class="panel-footer-buttons">
       <em>added by <%= link_to @post.user.full_name, @post.user %></em>
+      <%= button_to 'Delete Piture', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= button_to 'Edit Picture', edit_post_path,{method: :get} %>
+      </div>
     </div>
   </div>
 </div>
@@ -24,10 +28,12 @@
 <h3>New Comment</h3>
 
 <%= render 'comments/form' %>
+<br>
+<br>
 
 
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
+
 
 
 
