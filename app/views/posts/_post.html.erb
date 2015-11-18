@@ -2,6 +2,7 @@
   <%= div_for post do %>
   <div class="col-sm-4">
     <div class="panel panel-default">
+    <div class="classWithPad">
       <div class="panel-heading">
         <h3 class="panel-title"><%= link_to post.title, post %></h3>
       </div>
@@ -10,6 +11,7 @@
       </div>
       <div class="panel-footer">
         <em>added by <%= link_to post.user.full_name, post.user %></em>
+      </div>
       </div>
     </div>
   </div>
